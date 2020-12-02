@@ -1,0 +1,12 @@
+header {
+    background: url("../img/img-1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 670px) {
+    header {
+      min-height: 600px;
+    }
+  }
