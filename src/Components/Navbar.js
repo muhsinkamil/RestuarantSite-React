@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
   useEffect(() => {
     var sidenavbar = document.querySelectorAll(".sidenav")
-    var navInstance = M.Sidenav.init(sidenavbar)
+    M.Sidenav.init(sidenavbar)
   }, [])
 
   return (
@@ -16,36 +16,44 @@ const Navbar = () => {
         </Link>
 
         <Link to="#" className="sidenav-trigger" data-target="mobile-links">
-          <i class="material-icons">menu</i>
+          <i className="material-icons">menu</i>
         </Link>
 
         <ul className="right hide-on-med-and-down">
           <li>
-            <Link to="/menu" className="yellow-text darken-3 btn-small orange">
+            <Link
+              to="/menu"
+              className="yellow-text lighten-3 btn-flat transparent"
+            >
               Menu
             </Link>
           </li>
-          <li>
-            <Link to="/cart" className="yellow-text darken-3 btn-small orange">
-              Cart
-            </Link>
-          </li>
+
           <li>
             <Link
               to="/contact"
-              className="yellow-text darken-3 btn-small orange"
+              className="yellow-text darken-3 btn-flat transparent"
             >
               Contact
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/cart"
+              className="yellow-text darken-3 btn-flat transparent"
+            >
+              <i className="material-icons">shopping_cart</i>
             </Link>
           </li>
         </ul>
 
         <ul className="sidenav grey" id="mobile-links">
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/cart">Cart</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
