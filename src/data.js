@@ -34,7 +34,7 @@ const items = [
   {
     id: 5,
     title: 'Pane Carasare',
-    category: 'breakfast',
+    category: 'Breakfast',
     price: 120,
     img: '/images/lunch-1.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -42,7 +42,7 @@ const items = [
   {
     id: 6,
     title: 'Summer Fighter',
-    category: 'shakes',
+    category: 'Juices',
     price: 80,
     img: '/images/drinks-3.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -50,7 +50,7 @@ const items = [
   {
     id: 7,
     title: 'Muscle Builder Meal',
-    category: 'lunch',
+    category: 'Lunch',
     price: 70,
     img: '/images/lunch-3.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -58,7 +58,7 @@ const items = [
   {
     id: 8,
     title: 'American Classic',
-    category: 'lunch',
+    category: 'Lunch',
     price: 90,
     img: '/images/breakfast-4.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -66,7 +66,7 @@ const items = [
   {
     id: 9,
     title: 'Waffle',
-    category: 'lunch',
+    category: 'Lunch',
     price: 65,
     img: '/images/breakfast-2.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -74,7 +74,7 @@ const items = [
   {
     id: 10,
     title: 'Day Starter',
-    category: 'lunch',
+    category: 'Lunch',
     price: 65,
     img: '/images/breakfast-3.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
