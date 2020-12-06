@@ -1,15 +1,21 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import Card from "./Card"
-import items from "../data"
 import Categories from "./Categories"
+import { connect } from "react-redux"
+import { fetchItems } from "../Actions"
 
-const Menu = () => {
-  const [filteredItems, setFilteredItems] = useState(items)
+const Menu = ({ allItems, fetchItems, filteredItems }) => {
 
-  const categories = ["all", ...new Set(items.map((item) => item.category))]
+  useEffect(() => {
+    fetchItems()
+  },[])
 
-  const getCardList = (items) => {
-    return items.map((item) => {
+  if (!allItems) {
+    return <div className="center">Loading...</div>
+  }
+
+  const getCardList = (filteredItems) => {
+    return filteredItems.map((item) => {
       return (
         <div className="col s12 m6 l4" key={item.id}>
           <Card item={item} />
@@ -18,29 +24,25 @@ const Menu = () => {
     })
   }
 
-  const filterItems = (category) => {
-    if(category === "all"){
-      setFilteredItems(items)
-    }else{
-    const filteredMenu = items.filter((item) => item.category === category)
-    setFilteredItems(filteredMenu)
-  }
-}
+  const categories = ["all", ...new Set(allItems.map((item) => item.category))]
 
   return (
     <div className="container">
       <h2 className="center-align red-text">Menu</h2>
-      <Categories
-        categories={categories}
-        filterItems={ filterItems }
-      />
+      <Categories categories={categories} />
 
       <div className="row" style={{ marginTop: "1rem" }}>
         {getCardList(filteredItems)}
       </div>
-
     </div>
   )
 }
 
-export default Menu
+const mapStateToProps = (state) => {
+  return {
+    allItems: state.items.allItems,
+    filteredItems: state.items.filteredItems,
+  }
+}
+
+export default connect(mapStateToProps, { fetchItems })(Menu)
