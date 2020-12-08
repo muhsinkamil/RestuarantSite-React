@@ -1,7 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { connect } from "react-redux"
+import { addItem } from "../Actions"
 
-const Card = ({ item }) => {
+const Card = ({ item, addItem }) => {
   return (
     <div className="card">
       <div className="card-image">
@@ -14,12 +15,12 @@ const Card = ({ item }) => {
         <p>{item.desc}</p>
       </div>
       <div className="card-action">
-        <Link to="/" className="red-text" style={{ fontWeight: 500 }}>
+        <button className="btn red waves-effect" onClick={() => addItem(item)}>
           Add Item
-        </Link>
+        </button>
       </div>
     </div>
   )
 }
 
-export default Card
+export default connect(null, { addItem })(Card)

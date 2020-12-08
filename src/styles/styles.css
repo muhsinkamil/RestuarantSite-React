@@ -1,5 +1,5 @@
 header {
-  background: url('../images/img-1.jpg');
+  background: url("../images/img-1.jpg");
   background-size: cover;
   background-position: center;
   min-height: 91.26vh;
@@ -11,9 +11,19 @@ header {
   }
 }
 
-.center{
+.center {
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.notification-badge {
+  background: #b6bb6696;
+  position: relative;
+  top: -50px;
+  right: -20px;
+  border-radius: 50%;
+  padding: 5px 8px;
 }

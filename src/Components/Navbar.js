@@ -1,8 +1,10 @@
 import React, { useEffect } from "react"
 import M from "materialize-css"
+import _ from 'lodash'
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
-const Navbar = () => {
+const Navbar = ({ cartItemsCount }) => {
   useEffect(() => {
     var sidenavbar = document.querySelectorAll(".sidenav")
     M.Sidenav.init(sidenavbar)
@@ -44,11 +46,14 @@ const Navbar = () => {
               className="yellow-text darken-3 btn-flat transparent"
             >
               <i className="material-icons">shopping_cart</i>
+              <small className="notification-badge white-text">
+                { cartItemsCount }
+              </small>
             </Link>
           </li>
         </ul>
 
-        <ul className="sidenav grey" id="mobile-links">
+        <ul className="sidenav grey sidenav-close" id="mobile-links">
           <li>
             <Link to="/menu">Menu</Link>
           </li>
@@ -64,4 +69,8 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  return { cartItemsCount: _.size(state.cartItems.items) }
+}
+
+export default connect(mapStateToProps)(Navbar)

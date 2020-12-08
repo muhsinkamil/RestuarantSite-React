@@ -1,17 +1,21 @@
 import React, { useEffect } from "react"
 import Card from "./Card"
 import Categories from "./Categories"
+import loader from '../images/loader.gif'
 import { connect } from "react-redux"
 import { fetchItems } from "../Actions"
 
 const Menu = ({ allItems, fetchItems, filteredItems }) => {
-
   useEffect(() => {
     fetchItems()
-  },[])
+  }, [])
 
   if (!allItems) {
-    return <div className="center">Loading...</div>
+    return (
+      <div className="center">
+        <img src={ loader } alt="Loading..."/>
+      </div>
+    )
   }
 
   const getCardList = (filteredItems) => {
