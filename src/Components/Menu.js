@@ -44,8 +44,8 @@ const Menu = ({ allItems, fetchItems, filteredItems }) => {
 
 const mapStateToProps = (state) => {
   return {
-    allItems: state.items.allItems,
-    filteredItems: state.items.filteredItems,
+    allItems: state.menuItems.allItems,
+    filteredItems: state.menuItems.filteredItems,
   }
 }
 

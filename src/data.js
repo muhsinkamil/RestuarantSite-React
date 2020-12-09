@@ -66,7 +66,7 @@ const items = [
   {
     id: 9,
     title: 'Waffle',
-    category: 'Lunch',
+    category: 'Breakfast',
     price: 65,
     img: '/images/breakfast-2.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',
@@ -74,7 +74,7 @@ const items = [
   {
     id: 10,
     title: 'Day Starter',
-    category: 'Lunch',
+    category: 'Breakfast',
     price: 65,
     img: '/images/breakfast-3.jpg',
     desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, minusi',

@@ -22,7 +22,7 @@ const Categories = ({ allItems, categories, filterItems }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { allItems: state.items.allItems }
+  return { allItems: state.menuItems.allItems }
 }
 
 export default connect(mapStateToProps, { filterItems })(Categories)
