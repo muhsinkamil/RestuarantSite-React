@@ -36,9 +36,6 @@ export const cartReducer = (state = initialState, action) => {
       }
 
     case DECREASE_QUANTITY:
-      if (state.items[action.payload].quantity === 1) {
-        console.log("there is only one item")
-      }
       return {
         ...state,
         items: {
@@ -62,7 +59,7 @@ export const cartReducer = (state = initialState, action) => {
       }
 
     case CLEAR_CART:
-      return initialState
+      return { items: {}, total: 0}
 
     default:
       return state

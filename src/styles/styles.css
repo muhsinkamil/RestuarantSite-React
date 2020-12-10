@@ -19,15 +19,7 @@ header {
   justify-content: center;
 }
 
-.flex-group{
-  display: flex;
-  align-items: center;
-}
-
-
-.bold{
-  font-weight: bold;
-}
+/* At navbar */
 .notification-badge {
   background: #b6bb6696;
   position: relative;
@@ -35,4 +27,41 @@ header {
   right: -20px;
   border-radius: 50%;
   padding: 5px 8px;
+}
+
+.cart-list-group{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cart-list{
+  margin-left: 30%;
+}
+
+.flex-group{
+  display: flex;
+  align-items: center;
+}
+
+.quantity-group > button{
+  margin: 10px;
+}
+
+.quantity-group{
+  display: flex;
+  align-items: baseline;
+}
+
+.remove-button{
+  margin: 0 5%
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.ruler{
+  width: 20%;
+  border-top: 2px solid rgb(204, 204, 56);
+  border-radius: 10px;
 }
