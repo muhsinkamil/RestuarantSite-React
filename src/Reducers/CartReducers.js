@@ -16,55 +16,52 @@ export const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         items: {
-          ...state.items,
+            ...state.items,
           [action.payload.id]: { ...action.payload, quantity: 1 },
-        },
-        total: state.total + action.payload.price,
-      }
-
-    case INCREASE_QUANTITY:
-      return {
-        ...state,
-        items: {
-          ...state.items,
-          [action.payload]: {
-            ...state.items[action.payload],
-            quantity: state.items[action.payload].quantity + 1,
           },
-        },
-        total: state.total + state.items[action.payload].price,
+          total: state.total + action.payload.price,
       }
 
-    case DECREASE_QUANTITY:
-      if (state.items[action.payload].quantity === 1) {
-        console.log("there is only one item")
-      }
-      return {
-        ...state,
-        items: {
-          ...state.items,
+      case INCREASE_QUANTITY:
+        return {
+          ...state,
+          items: {
+              ...state.items,
           [action.payload]: {
-            ...state.items[action.payload],
-            quantity: state.items[action.payload].quantity - 1,
-          },
-        },
-        total: state.total - state.items[action.payload].price,
-      }
+                ...state.items[action.payload],
+                quantity: state.items[action.payload].quantity + 1,
+              },
+            },
+            total: state.total + state.items[action.payload].price,
+        }
 
-    case REMOVE_ITEM:
-      return {
-        ...state,
-        items: _.omit(state.items, action.payload),
-        total:
-          state.total -
-          state.items[action.payload].quantity *
-            state.items[action.payload].price,
-      }
+        case DECREASE_QUANTITY:
+          return {
+            ...state,
+            items: {
+                ...state.items,
+          [action.payload]: {
+                  ...state.items[action.payload],
+                  quantity: state.items[action.payload].quantity - 1,
+                },
+              },
+              total: state.total - state.items[action.payload].price,
+          }
 
-    case CLEAR_CART:
-      return initialState
+          case REMOVE_ITEM:
+            return {
+              ...state,
+              items: _.omit(state.items, action.payload),
+                total:
+                state.total -
+                state.items[action.payload].quantity *
+                state.items[action.payload].price,
+            }
 
-    default:
-      return state
+            case CLEAR_CART:
+              return initialState
+
+            default:
+              return state
   }
 }

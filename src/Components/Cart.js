@@ -46,7 +46,7 @@ const Cart = ({
             <h5 className="quantity">{item.quantity}</h5>
             <button
               className="btn-floating btn-small"
-              onClick={() => decreaseQuantity(item.id)}
+              onClick={() => item.quantity === 1 ? removeItem(item.id) : decreaseQuantity(item.id)}
             >
               <i className="material-icons bold">keyboard_arrow_down</i>
             </button>
