@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { addItem } from "../Actions"
 
+
 const Card = ({ item, addItem }) => {
   return (
     <div className="card">
@@ -14,13 +15,19 @@ const Card = ({ item, addItem }) => {
         </span>
         <p>{item.desc}</p>
       </div>
+
       <div className="card-action">
         <button className="btn red waves-effect" onClick={() => addItem(item)}>
           Add Item
         </button>
       </div>
+
     </div>
   )
 }
+
+// const mapStateToProps = (state) => {
+//   return { addedItems: state.cartItems.items }
+// }
 
 export default connect(null, { addItem })(Card)

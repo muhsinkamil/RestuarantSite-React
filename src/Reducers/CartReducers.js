@@ -59,7 +59,7 @@ export const cartReducer = (state = initialState, action) => {
       }
 
     case CLEAR_CART:
-      return { items: {}, total: 0}
+      return { items: {}, total: 0 }
 
     default:
       return state

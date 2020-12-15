@@ -10,7 +10,7 @@ const QuantityButton = ({
 }) => {
   return (
     <>
-      <div className="quantity-group">
+      <div className="quantity-group col s6 m4">
         <button
           className="btn-floating btn-small"
           onClick={() =>
@@ -22,20 +22,19 @@ const QuantityButton = ({
           <i className="material-icons bold">keyboard_arrow_down</i>
         </button>
 
-        <h5 className="quantity">{item.quantity}</h5>
+        <h5>{item.quantity}</h5>
 
         <button
-          className="btn-floating btn-small"
+          className="btn-floating btn-small center-align"
           onClick={() => increaseQuantity(item.id)}
         >
           <i className="material-icons bold">keyboard_arrow_up</i>
         </button>
       </div>
-      <div className="remove-button">
-        <button className="btn red" onClick={() => removeItem(item.id)}>
-          Remove
-        </button>
-      </div>
+
+      <button className="btn red col s2 m1" onClick={() => removeItem(item.id)}>
+        <i className="material-icons">clear</i>
+      </button>
     </>
   )
 }

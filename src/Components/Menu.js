@@ -8,7 +8,7 @@ import { fetchItems } from "../Actions"
 const Menu = ({ allItems, fetchItems, filteredItems }) => {
   useEffect(() => {
     fetchItems()
-  }, [])
+  }, [fetchItems])
 
   if (!allItems) {
     return (

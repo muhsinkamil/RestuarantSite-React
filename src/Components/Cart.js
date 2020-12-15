@@ -3,10 +3,10 @@ import _ from "lodash"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
-import { clearCart } from "../Actions"
+import { clearCart, removeItem } from "../Actions"
 import QuantityButton from "./QuantityButton"
 
-const Cart = ({ items, total, clearCart }) => {
+const Cart = ({ items, total, clearCart, removeItem }) => {
   if (!_.size(items)) {
     return (
       <div className="center">
@@ -24,25 +24,36 @@ const Cart = ({ items, total, clearCart }) => {
   const renderList = () => {
     return _.map(items, (item) => {
       return (
-        <div key={item.id} className="flex-group">
-          <h4>{item.title}</h4>
-          <QuantityButton item={item} />
+        <div className="row" key={ item.id }>
+          <div className="col s12 m5 l3">
+            <img src={item.img} style={{ height: "130px" }} alt={ item.title }/>
+          </div>
+
+          <div key={item.id} className="flex-group col s9 m7 l9">
+            <h5 className="col s6 m7 red-text">{item.title}</h5>
+            <QuantityButton item={item} />
+          </div>
         </div>
       )
     })
   }
 
   return (
-    <div className="cart-list-group">
-      <h3>Cart</h3>
-      <hr className="ruler" />
-      <div className="cart-list">{renderList()}</div>
+    <div>
+      <div className="center-align">
+        <h3>Cart</h3>
+        <hr className="ruler" />
+      </div>
 
-      <hr className="ruler" />
-      <h4>Total: {total}</h4>
-      <button className="btn red" onClick={() => clearCart()}>
-        Clear cart
-      </button>
+      <div className="container">{renderList()}</div>
+
+      <div className="center-align">
+        <hr className="ruler" />
+        <h4>Total: {total}</h4>
+        <button className="btn red" onClick={() => clearCart()}>
+          Clear cart
+        </button>
+      </div>
     </div>
   )
 }
@@ -53,4 +64,5 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   clearCart,
+  removeItem,
 })(Cart)

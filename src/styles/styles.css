@@ -29,33 +29,6 @@ header {
   padding: 5px 8px;
 }
 
-.cart-list-group{
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.cart-list{
-  margin-left: 30%;
-}
-
-.flex-group{
-  display: flex;
-  align-items: center;
-}
-
-.quantity-group > button{
-  margin: 10px;
-}
-
-.quantity-group{
-  display: flex;
-  align-items: baseline;
-}
-
-.remove-button{
-  margin: 0 5%
-}
-
 .bold{
   font-weight: bold;
 }
@@ -64,4 +37,15 @@ header {
   width: 20%;
   border-top: 2px solid rgb(204, 204, 56);
   border-radius: 10px;
+}
+
+.flex-group{
+  display: flex;
+  align-items: baseline;
+}
+
+.quantity-group{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
