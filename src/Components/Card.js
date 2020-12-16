@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import M from 'materialize-css'
 import { connect } from "react-redux"
 import { addItem } from "../Actions"
 
@@ -6,6 +7,12 @@ import QuantityChanger from "./QuantityChanger"
 import RemoveButton from "./RemoveButton"
 
 const Card = ({ item, addItem, addedItems }) => {
+
+  useEffect(() => {
+    var materialbox = document.querySelectorAll('.materialboxed')
+    M.Materialbox.init(materialbox)
+  }, [])
+
   const getCardAction = () => {
     return addedItems.hasOwnProperty(item.id) ? (
       <div className="quantity-group">
@@ -21,7 +28,7 @@ const Card = ({ item, addItem, addedItems }) => {
 
   return (
     <div className="card">
-      <div className="card-image">
+      <div className="card-image responsive-img materialboxed">
         <img src={item.img} alt="" />
       </div>
       <div className="card-content">

@@ -51,17 +51,17 @@ header {
 }
 
 .card{
-  height: 480px;
+  height: 500px;
 }
 
 @media (max-width: 800px){
   .card{
-    height: 450px;
+    height: 500px;
   }
 }
 
 @media (max-width: 500px){
   .card{
-    height: 475px;
+    height: 540px;
   }
 }
