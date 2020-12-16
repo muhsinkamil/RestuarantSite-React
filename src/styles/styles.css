@@ -47,5 +47,21 @@ header {
 .quantity-group{
   display: flex;
   align-items: baseline;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.card{
+  height: 480px;
+}
+
+@media (max-width: 800px){
+  .card{
+    height: 450px;
+  }
+}
+
+@media (max-width: 500px){
+  .card{
+    height: 475px;
+  }
 }

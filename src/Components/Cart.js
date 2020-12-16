@@ -4,7 +4,8 @@ import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 import { clearCart, removeItem } from "../Actions"
-import QuantityButton from "./QuantityButton"
+import RemoveButton from "./RemoveButton"
+import QuantityChanger from "./QuantityChanger"
 
 const Cart = ({ items, total, clearCart, removeItem }) => {
   if (!_.size(items)) {
@@ -24,14 +25,23 @@ const Cart = ({ items, total, clearCart, removeItem }) => {
   const renderList = () => {
     return _.map(items, (item) => {
       return (
-        <div className="row" key={ item.id }>
-          <div className="col s12 m5 l3">
-            <img src={item.img} style={{ height: "130px" }} alt={ item.title }/>
+        <div className="row" key={item.id}>
+          <div className="col s12 m3">
+            <img src={item.img} style={{ height: "120px" }} alt={item.title} />
           </div>
 
-          <div key={item.id} className="flex-group col s9 m7 l9">
-            <h5 className="col s6 m7 red-text">{item.title}</h5>
-            <QuantityButton item={item} />
+          <div key={item.id} className="col s12 m9">
+            <div className="flex-group row col s12">
+              <h5 className="red-text col s5 m7">{item.title}</h5>
+
+              <div className="quantity-group col s6 m4">
+                <QuantityChanger id={ item.id } />
+              </div>
+
+              <div className="col s2 m1 offset-m1">
+                <RemoveButton id={item.id} />
+              </div>
+            </div>
           </div>
         </div>
       )
@@ -50,7 +60,11 @@ const Cart = ({ items, total, clearCart, removeItem }) => {
       <div className="center-align">
         <hr className="ruler" />
         <h4>Total: {total}</h4>
-        <button className="btn red" onClick={() => clearCart()}>
+        <button
+          className="btn red"
+          onClick={() => clearCart()}
+          style={{ marginBottom: "20px" }}
+        >
           Clear cart
         </button>
       </div>

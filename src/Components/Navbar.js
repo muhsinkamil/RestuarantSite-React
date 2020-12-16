@@ -53,7 +53,7 @@ const Navbar = ({ cartItemsCount }) => {
           </li>
         </ul>
 
-        <ul className="sidenav grey sidenav-close" id="mobile-links">
+        <ul className="sidenav red lighten-2 sidenav-close" id="mobile-links">
           <li>
             <Link to="/menu">Menu</Link>
           </li>
