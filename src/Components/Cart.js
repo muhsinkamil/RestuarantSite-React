@@ -35,7 +35,7 @@ const Cart = ({ items, total, clearCart, removeItem }) => {
               <h5 className="red-text col s5 m7">{item.title}</h5>
 
               <div className="quantity-group col s6 m4">
-                <QuantityChanger id={ item.id } />
+                <QuantityChanger id={item.id} />
               </div>
 
               <div className="col s2 m1 offset-m1">

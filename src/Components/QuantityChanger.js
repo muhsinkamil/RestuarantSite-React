@@ -4,7 +4,7 @@ import { increaseQuantity, decreaseQuantity, removeItem } from "../Actions"
 
 const QuantityChanger = ({
   id,
-  cartItems,
+  item,
   increaseQuantity,
   decreaseQuantity,
   removeItem,
@@ -14,13 +14,13 @@ const QuantityChanger = ({
       <button
         className="btn-floating btn-small"
         onClick={() => {
-          cartItems[id].quantity === 1 ? removeItem(id) : decreaseQuantity(id)
+          item.quantity === 1 ? removeItem(id) : decreaseQuantity(id)
         }}
       >
         <i className="material-icons bold">keyboard_arrow_down</i>
       </button>
 
-      <h5>{cartItems[id].quantity} </h5>
+      <h5>{item.quantity} </h5>
 
       <button
         className="btn-floating btn-small"
@@ -32,8 +32,9 @@ const QuantityChanger = ({
   )
 }
 
-const mapStateToProps = (state) => {
-  return { cartItems: state.cartItems.items }
+const mapStateToProps = (state, ownProps) => {
+  const id = ownProps.id
+  return { item: state.cartItems.items[id] }
 }
 
 export default connect(mapStateToProps, {

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import M from 'materialize-css'
 import Card from "./Card"
 import Categories from "./Categories"
 import loader from '../images/loader.gif'
@@ -8,6 +9,8 @@ import { fetchItems } from "../Actions"
 const Menu = ({ allItems, fetchItems, filteredItems }) => {
   useEffect(() => {
     fetchItems()
+    var materialbox = document.querySelectorAll('.materialboxed')
+    M.Materialbox.init(materialbox)
   }, [fetchItems])
 
   if (!allItems) {

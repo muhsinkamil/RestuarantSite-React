@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import M from 'materialize-css'
+import React from "react"
 import { connect } from "react-redux"
 import { addItem } from "../Actions"
 
@@ -7,11 +6,6 @@ import QuantityChanger from "./QuantityChanger"
 import RemoveButton from "./RemoveButton"
 
 const Card = ({ item, addItem, addedItems }) => {
-
-  useEffect(() => {
-    var materialbox = document.querySelectorAll('.materialboxed')
-    M.Materialbox.init(materialbox)
-  }, [])
 
   const getCardAction = () => {
     return addedItems.hasOwnProperty(item.id) ? (
