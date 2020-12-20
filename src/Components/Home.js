@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
 import M from "materialize-css"
 import burger from "../images/burger.jpg"
-// import veggies from "../images/veggies.jpg"
 import ParallaxImg from "./ParallaxImg"
+import InfoSection from "./InfoSection"
 
 const Home = () => {
   useEffect(() => {
@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <>
       <header></header>
-      <ParallaxImg poster = { burger }/>
-      {/* <ParallaxImg poster = { veggies } /> */}
+      <ParallaxImg poster={burger} />
+      <InfoSection />
     </>
   )
 }
