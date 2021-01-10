@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { increaseQuantity, decreaseQuantity, removeItem } from "../Actions"
+import { increaseQuantity, decreaseQuantity, removeItem } from "../../Actions"
 
 const QuantityChanger = ({
   id,

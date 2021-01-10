@@ -4,8 +4,8 @@ import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 import { clearCart, removeItem } from "../Actions"
-import RemoveButton from "./RemoveButton"
-import QuantityChanger from "./QuantityChanger"
+import RemoveButton from "./Atoms/RemoveButton"
+import QuantityChanger from "./Atoms/QuantityChanger"
 
 const Cart = ({ items, total, clearCart, removeItem }) => {
   if (!_.size(items)) {

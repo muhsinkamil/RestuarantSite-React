@@ -1,6 +1,6 @@
 import React from "react"
 import {connect} from 'react-redux'
-import { removeItem } from "../Actions"
+import { removeItem } from "../../Actions"
 
 const RemoveButton = ({ id, removeItem }) => {
   return (

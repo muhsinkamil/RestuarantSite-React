@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { filterItems } from "../Actions"
+import { filterItems } from "../../Actions"
 
 const Categories = ({ allItems, categories, filterItems }) => {
   return (

@@ -2,9 +2,9 @@ import React, { useEffect } from "react"
 import M from 'materialize-css'
 import Card from "./Card"
 import Categories from "./Categories"
-import loader from '../images/loader.gif'
+import loader from '../../images/loader.gif'
 import { connect } from "react-redux"
-import { fetchItems } from "../Actions"
+import { fetchItems } from "../../Actions"
 
 const Menu = ({ allItems, fetchItems, filteredItems }) => {
   useEffect(() => {

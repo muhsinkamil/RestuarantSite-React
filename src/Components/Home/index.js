@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import M from "materialize-css"
-import burger from "../images/burger.jpg"
-import ParallaxImg from "./ParallaxImg"
+import burger from "../../images/burger.jpg"
+import ParallaxImg from "../Atoms/ParallaxImg"
 import InfoSection from "./InfoSection"
 import Footer from './Footer'
 

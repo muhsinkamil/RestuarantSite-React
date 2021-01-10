@@ -1,9 +1,9 @@
 import React from "react"
 import { connect } from "react-redux"
-import { addItem } from "../Actions"
+import { addItem } from "../../Actions"
 
-import QuantityChanger from "./QuantityChanger"
-import RemoveButton from "./RemoveButton"
+import QuantityChanger from "../Atoms/QuantityChanger"
+import RemoveButton from "../Atoms/RemoveButton"
 
 const Card = ({ item, addItem, addedItems }) => {
 
