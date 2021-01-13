@@ -7,7 +7,7 @@ import { clearCart, removeItem } from "../Actions"
 import RemoveButton from "./Atoms/RemoveButton"
 import QuantityChanger from "./Atoms/QuantityChanger"
 
-const Cart = ({ items, total, clearCart, removeItem }) => {
+const Cart = ({ items, total, clearCart }) => {
   if (!_.size(items)) {
     return (
       <div className="center">
