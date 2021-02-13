@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$screen-xs: 480px;
+$screen-sm: 540px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+@mixin flex-center($height) {
+  height: $height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@import "_header.scss";
+@import "_card.scss";
+@import "_cart.scss";

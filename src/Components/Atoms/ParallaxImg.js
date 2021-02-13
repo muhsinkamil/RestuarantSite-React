@@ -4,7 +4,7 @@ const ParallaxImg = ({ poster }) => {
   return (
     <div className="parallax-container">
       <div className="parallax">
-        <img src={poster} alt="" />
+        <img src={poster} alt="poster" />
       </div>
     </div>
   )

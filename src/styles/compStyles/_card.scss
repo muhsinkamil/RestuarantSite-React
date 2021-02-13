@@ -1,0 +1,36 @@
+.quantity-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  height: 500px;
+
+  .card-content {
+    min-height: 40%;
+  }
+
+  @media (max-width: $screen-lg) {
+    .card-content {
+      min-height: 50%;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    .card-content {
+      min-height: 40%;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    height: 600px;
+    .card-content {
+      min-height: 30%;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    height: 500px;
+  }
+}

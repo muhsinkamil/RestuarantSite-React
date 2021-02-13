@@ -27,13 +27,12 @@ const Cart = ({ items, total, clearCart }) => {
       return (
         <div className="row" key={item.id}>
           <div className="col s12 m3">
-            <img src={item.img} style={{ height: "120px" }} alt={item.title} />
+            <img src={item.img} alt={item.title} className="card-item-img" />
           </div>
 
           <div key={item.id} className="col s12 m9">
-            <div className="flex-group row col s12">
-              <h5 className="red-text col s5 m7">{item.title}</h5>
-
+            <div className="col s12 flex-group">
+              <div className="red-text col s5 m7 title">{item.title}</div>
               <div className="quantity-group col s6 m4">
                 <QuantityChanger id={item.id} />
               </div>
@@ -49,11 +48,9 @@ const Cart = ({ items, total, clearCart }) => {
   }
 
   return (
-    <div>
-      <div className="center-align">
-        <h3>Cart</h3>
-        <hr className="ruler" />
-      </div>
+    <>
+      <h3 className="center-align">Cart</h3>
+      <hr className="ruler" />
 
       <div className="container">{renderList()}</div>
 
@@ -63,12 +60,12 @@ const Cart = ({ items, total, clearCart }) => {
         <button
           className="btn red"
           onClick={() => clearCart()}
-          style={{ marginBottom: "20px" }}
+          style={{ marginBottom: "1.2rem" }}
         >
           Clear cart
         </button>
       </div>
-    </div>
+    </>
   )
 }
 

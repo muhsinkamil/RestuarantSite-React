@@ -1,10 +1,9 @@
 import React from "react"
 
 const Contact = () => {
-
   return (
-    <div className="center form-group">
-      <h3 className="red-text">Write to us!!</h3>
+    <div className="form-group">
+      <h3 className="center-align red-text">Write to us!!</h3>
       <div className="row">
         <form className="col s12">
           <div className="row">

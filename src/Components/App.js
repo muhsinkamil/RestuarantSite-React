@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import "../styles/styles.css"
+import "../styles/dist/main.css"
 import Navbar from "./Navbar"
 import Home from "./Home"
 import Menu from "./Menu"

@@ -6,7 +6,6 @@ import QuantityChanger from "../Atoms/QuantityChanger"
 import RemoveButton from "../Atoms/RemoveButton"
 
 const Card = ({ item, addItem, addedItems }) => {
-
   const getCardAction = () => {
     return addedItems.hasOwnProperty(item.id) ? (
       <div className="quantity-group">
@@ -31,7 +30,9 @@ const Card = ({ item, addItem, addedItems }) => {
         </span>
         <p>{item.desc}</p>
 
-        <h5 style={{ marginTop: '20px'}}><span className="orange-text">Price: </span> {item.price}</h5>
+        <h5 style={{ marginTop: "20px" }}>
+          <span className="orange-text">Price: </span> {item.price}
+        </h5>
       </div>
 
       <div className="card-action">{getCardAction()}</div>

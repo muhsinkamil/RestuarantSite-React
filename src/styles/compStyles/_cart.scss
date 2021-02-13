@@ -1,0 +1,21 @@
+.flex-group {
+  display: flex;
+  align-items: baseline;
+}
+
+.title {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.ruler {
+  width: 20%;
+  border-top: 2px solid rgb(204, 204, 56);
+  border-radius: 10px;
+  margin: 5% auto;
+}
+
+.card-item-img {
+  height: 100%;
+  width: 100%;
+}
