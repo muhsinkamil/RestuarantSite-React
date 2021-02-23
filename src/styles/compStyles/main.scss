@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
+p {
+  padding-bottom: 0.5rem;
+}
+
+$screen-xss: 350px;
 $screen-xs: 480px;
-$screen-sm: 540px;
+$screen-sm: 640px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 

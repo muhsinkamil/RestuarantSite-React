@@ -1,17 +1,26 @@
 import React, { useEffect } from "react"
 import M from "materialize-css"
-import _ from 'lodash'
+import _ from "lodash"
+import { withRouter } from "react-router"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 
-const Navbar = ({ cartItemsCount }) => {
+const Navbar = ({ cartItemsCount, location }) => {
   useEffect(() => {
     var sidenavbar = document.querySelectorAll(".sidenav")
     M.Sidenav.init(sidenavbar)
   }, [])
 
+  const navClass = (pathName) => {
+    if (pathName === "/") {
+      return "nav-wrapper black"
+    } else {
+      return "nav-wrapper red darken-2"
+    }
+  }
+
   return (
-    <nav className="nav-wrapper red darken-3">
+    <nav className={navClass(location.pathname)}>
       <div className="container">
         <Link to="/" className="brand-logo">
           FEST
@@ -23,10 +32,7 @@ const Navbar = ({ cartItemsCount }) => {
 
         <ul className="right hide-on-med-and-down">
           <li>
-            <Link
-              to="/menu"
-              className="yellow-text lighten-3 btn-flat transparent"
-            >
+            <Link to="/menu" className="yellow-text btn-flat transparent">
               Menu
             </Link>
           </li>
@@ -46,8 +52,8 @@ const Navbar = ({ cartItemsCount }) => {
               className="yellow-text darken-3 btn-flat transparent"
             >
               <i className="material-icons">shopping_cart</i>
-              <small className="notification-badge white-text">
-                { cartItemsCount }
+              <small className="notification-badge yellow-text">
+                {cartItemsCount}
               </small>
             </Link>
           </li>
@@ -73,4 +79,4 @@ const mapStateToProps = (state) => {
   return { cartItemsCount: _.size(state.cartItems.items) }
 }
 
-export default connect(mapStateToProps)(Navbar)
+export default withRouter(connect(mapStateToProps)(Navbar))

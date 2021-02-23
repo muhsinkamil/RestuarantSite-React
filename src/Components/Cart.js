@@ -32,7 +32,7 @@ const Cart = ({ items, total, clearCart }) => {
 
           <div key={item.id} className="col s12 m9">
             <div className="col s12 flex-group">
-              <div className="red-text col s5 m7 title">{item.title}</div>
+              <div className="red-text col s4 m7 title">{item.title}</div>
               <div className="quantity-group col s6 m4">
                 <QuantityChanger id={item.id} />
               </div>

@@ -1,3 +1,12 @@
+@mixin card-height($screenSize, $height, $minHeight: 40%) {
+  @media (max-width: $screenSize) {
+    height: $height;
+    .card-content {
+      min-height: $minHeight;
+    }
+  }
+}
+
 .quantity-group {
   display: flex;
   align-items: center;
@@ -11,26 +20,9 @@
     min-height: 40%;
   }
 
-  @media (max-width: $screen-lg) {
-    .card-content {
-      min-height: 50%;
-    }
-  }
-
-  @media (max-width: $screen-md) {
-    .card-content {
-      min-height: 40%;
-    }
-  }
-
-  @media (max-width: $screen-sm) {
-    height: 600px;
-    .card-content {
-      min-height: 30%;
-    }
-  }
-
-  @media (max-width: $screen-xs) {
-    height: 500px;
-  }
+  @include card-height($screen-lg, 500px, 50%);
+  @include card-height($screen-md, 500px);
+  @include card-height($screen-sm, 600px, 30%);
+  @include card-height($screen-xs, 520px);
+  @include card-height($screen-xss, 480px);
 }
