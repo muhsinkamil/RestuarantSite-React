@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-p {
-  padding-bottom: 0.5rem;
-}
-
 $screen-xss: 350px;
 $screen-xs: 480px;
 $screen-sm: 640px;
@@ -23,5 +19,8 @@ $screen-lg: 1200px;
 }
 
 @import "_header.scss";
+@import "_home.scss";
 @import "_card.scss";
+@import "_contact.scss";
 @import "_cart.scss";
+@import "_slides.scss";

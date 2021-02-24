@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-p {
-  padding-bottom: 0.5rem;
-}
-
 header {
   background: url("../../images/hero.jpg");
   background-size: cover;
@@ -44,6 +40,10 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+p {
+  padding-bottom: 0.5rem;
 }
 
 .quantity-group {
@@ -111,6 +111,14 @@ header {
   }
 }
 
+textarea {
+  height: auto;
+  width: 100%;
+  resize: none;
+  caret-color: red;
+  outline: none;
+}
+
 .flex-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,5 +143,22 @@ header {
 .card-item-img {
   height: 100%;
   width: 100%;
+}
+
+.slide-container {
+  min-height: 40vw;
+}
+
+.img-container {
+  border-radius: 50%;
+  background: coral;
+}
+
+.slide-img {
+  height: 99%;
+  width: 99%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=main.css.map */

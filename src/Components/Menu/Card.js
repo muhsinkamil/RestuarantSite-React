@@ -21,8 +21,8 @@ const Card = ({ item, addItem, addedItems }) => {
 
   return (
     <div className="card">
-      <div className="card-image responsive-img materialboxed">
-        <img src={item.img} alt="" />
+      <div className="card-image">
+        <img src={item.img} alt="food" />
       </div>
       <div className="card-content">
         <span className="card-title red-text" style={{ fontWeight: 500 }}>

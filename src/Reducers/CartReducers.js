@@ -6,7 +6,7 @@ import {
   REMOVE_ITEM,
 } from "../Actions/types"
 
-import _ from "lodash"
+import { omit } from "lodash"
 
 const initialState = { items: {}, total: 0 }
 
@@ -51,7 +51,7 @@ export const cartReducer = (state = initialState, action) => {
     case REMOVE_ITEM:
       return {
         ...state,
-        items: _.omit(state.items, action.payload),
+        items: omit(state.items, action.payload),
         total:
           state.total -
           state.items[action.payload].quantity *

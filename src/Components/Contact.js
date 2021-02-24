@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="form-group">
       <h3 className="center-align red-text">Write to us!!</h3>
       <div className="row">
-        <form className="col s12">
+        <form className="col s12 m6 offset-m3">
           <div className="row">
             <div className="input-field col s12">
               <input type="text" id="name" autoComplete="off" />
@@ -23,12 +23,17 @@ const Contact = () => {
           <div className="row">
             <div className="text-area col s12">
               <h6
-                className="left-align green-text"
+                className="left-align green-text "
                 style={{ marginBottom: "10px" }}
               >
                 Message
               </h6>
-              <textarea name="message" placeholder="Message" cols="50" />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="5"
+                autoFocus
+              />
             </div>
           </div>
 

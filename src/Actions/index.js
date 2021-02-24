@@ -1,4 +1,4 @@
-import items from "../data"
+import { items } from "../data"
 
 import {
   FETCH_ITEMS,
@@ -57,6 +57,6 @@ export const decreaseQuantity = (id) => {
 
 export const clearCart = () => {
   return {
-    type: CLEAR_CART
+    type: CLEAR_CART,
   }
 }

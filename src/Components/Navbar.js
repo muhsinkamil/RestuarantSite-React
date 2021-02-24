@@ -12,11 +12,7 @@ const Navbar = ({ cartItemsCount, location }) => {
   }, [])
 
   const navClass = (pathName) => {
-    if (pathName === "/") {
-      return "nav-wrapper black"
-    } else {
-      return "nav-wrapper red darken-2"
-    }
+    return pathName === "/" ? "nav-wrapper black" : "nav-wrapper red darken-2"
   }
 
   return (
@@ -61,13 +57,21 @@ const Navbar = ({ cartItemsCount, location }) => {
 
         <ul className="sidenav red lighten-2 sidenav-close" id="mobile-links">
           <li>
-            <Link to="/menu">Menu</Link>
+            <Link to="/menu">
+              <i className="material-icons">restaurant_menu</i>
+              Menu
+            </Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">
+              <i className="material-icons">shopping_cart</i>
+              Cart
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">
+              <i className="material-icons">email</i>Contact
+            </Link>
           </li>
         </ul>
       </div>
