@@ -22,7 +22,7 @@ const Chefs = () => {
 
   return (
     <section className="container slide-container">
-      <h3 className="yellow-text center-align text-darken-3">Our Chefs</h3>
+      <h3 className="yellow-text center-align text-darken-4">Our Chefs</h3>
       <hr className="ruler" />
 
       <div className="row valign-wrapper">

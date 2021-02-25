@@ -6,6 +6,7 @@ import Home from "./Home"
 import Menu from "./Menu"
 import Cart from "./Cart"
 import Contact from "./Contact"
+import NotFound from "./NotFound"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/cart" exact component={Cart}></Route>
           <Route path="/menu" exact component={Menu}></Route>
           <Route path="/contact" exact component={Contact}></Route>
+          <Route exact component={NotFound}></Route>
         </Switch>
       </BrowserRouter>
     </div>

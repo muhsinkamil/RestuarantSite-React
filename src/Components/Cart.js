@@ -1,18 +1,18 @@
 import React from "react"
-import _ from "lodash"
+import { size, map } from "lodash"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-
+import EmptyCart from "../images/EmptyCart.png"
 import { clearCart, removeItem } from "../Actions"
 import RemoveButton from "./Atoms/RemoveButton"
 import QuantityChanger from "./Atoms/QuantityChanger"
 
 const Cart = ({ items, total, clearCart }) => {
-  if (!_.size(items)) {
+  if (!size(items)) {
     return (
       <div className="center">
-        <h3 className="red-text">Oops! You have not added any item</h3>
-        <h4 className="red-text">Visit our</h4>
+        <img src={EmptyCart} alt="Empty cart" />
+        <h4 className="red-text">So Empty!! Visit our</h4>
         <div style={{ marginTop: "20px" }}>
           <Link to="/menu" className="btn red">
             Menu
@@ -23,7 +23,7 @@ const Cart = ({ items, total, clearCart }) => {
   }
 
   const renderList = () => {
-    return _.map(items, (item) => {
+    return map(items, (item) => {
       return (
         <div className="row" key={item.id}>
           <div className="col s12 m3">

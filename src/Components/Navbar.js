@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
-import M from "materialize-css"
-import _ from "lodash"
+import { Sidenav } from "materialize-css"
+import { size } from "lodash"
 import { withRouter } from "react-router"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
@@ -8,7 +8,7 @@ import { connect } from "react-redux"
 const Navbar = ({ cartItemsCount, location }) => {
   useEffect(() => {
     var sidenavbar = document.querySelectorAll(".sidenav")
-    M.Sidenav.init(sidenavbar)
+    Sidenav.init(sidenavbar)
   }, [])
 
   const navClass = (pathName) => {
@@ -48,14 +48,18 @@ const Navbar = ({ cartItemsCount, location }) => {
               className="yellow-text darken-3 btn-flat transparent"
             >
               <i className="material-icons">shopping_cart</i>
-              <small className="notification-badge yellow-text">
+              <small className="notification-badge yellow-text navbar-notification">
                 {cartItemsCount}
               </small>
             </Link>
           </li>
         </ul>
 
-        <ul className="sidenav red lighten-2 sidenav-close" id="mobile-links">
+        {/* Side bar */}
+        <ul
+          className="sidenav deep-orange lighten-5 sidenav-close"
+          id="mobile-links"
+        >
           <li>
             <Link to="/menu">
               <i className="material-icons">restaurant_menu</i>
@@ -80,7 +84,7 @@ const Navbar = ({ cartItemsCount, location }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { cartItemsCount: _.size(state.cartItems.items) }
+  return { cartItemsCount: size(state.cartItems.items) }
 }
 
 export default withRouter(connect(mapStateToProps)(Navbar))

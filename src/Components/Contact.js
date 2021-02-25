@@ -8,7 +8,7 @@ const Contact = () => {
         <form className="col s12 m6 offset-m3">
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" id="name" autoComplete="off" />
+              <input type="text" id="name" autoComplete="off" autoFocus />
               <label htmlFor="name">Name</label>
             </div>
           </div>
@@ -23,17 +23,12 @@ const Contact = () => {
           <div className="row">
             <div className="text-area col s12">
               <h6
-                className="left-align green-text "
+                className="left-align teal-text"
                 style={{ marginBottom: "10px" }}
               >
                 Message
               </h6>
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows="5"
-                autoFocus
-              />
+              <textarea name="message" placeholder="Message" rows="5" />
             </div>
           </div>
 
