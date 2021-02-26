@@ -26,19 +26,15 @@ const Chefs = () => {
       <hr className="ruler" />
 
       <div className="row valign-wrapper">
-        <div className="col s1">
-          <button className="btn" onClick={prevSlide}>
-            <i className="material-icons">arrow_back</i>
-          </button>
-        </div>
+        <button className="btn" onClick={prevSlide}>
+          <i className="material-icons">arrow_back</i>
+        </button>
 
         <Slide chef={chefs[index]} />
 
-        <div className="col s1">
-          <button className="btn" onClick={nextSlide}>
-            <i className="material-icons">arrow_forward</i>
-          </button>
-        </div>
+        <button className="btn" onClick={nextSlide}>
+          <i className="material-icons">arrow_forward</i>
+        </button>
       </div>
     </section>
   )

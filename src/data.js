@@ -103,14 +103,14 @@ export const chefs = [
     id: 2,
     name: "Louis Hansel",
     desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi adipisci possimus obcaecati vitae nam magnam quos dolorem fuga pariatur eveniet earum, esse voluptatem optio atque temporibus quaerat inventore ad.",
+      "quos dolorem fuga pariatur eveniet earum, esse voluptatem optio atque temporibus quaerat inventore ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem neque optio expedita laudantium.",
     img: "/images/louis-hansel.jpg",
   },
   {
     id: 3,
     name: "Febrian Zak",
     desc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi adipisci possimus obcaecati vitae nam magnam quos dolorem fuga pariatur eveniet earum, esse voluptatem optio atque temporibus quaerat inventore ad.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti fugit totam eveniet molestias, dignissimos ipsa quas numquam ab. Cum quidem quos corporis dignissimos deleniti laboriosam esse ab quibusdam facilis.",
     img: "/images/FebrianZakariah.jpg",
   },
 ]

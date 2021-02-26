@@ -8,7 +8,7 @@ const Categories = ({ allItems, categories, filterItems }) => {
       {categories.map((category, index) => {
         return (
           <button
-            className="btn-flat red white-text"
+            className="btn red white-text"
             style={{ margin: "8px", borderRadius: "20px" }}
             key={index}
             onClick={() => filterItems(allItems, category)}
